@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
+import { codeqr } from 'src/app/interfaces/codeqr.interface';
+import { ResultsService } from './results.service';
 
 @Component({
   selector: 'app-results',
@@ -6,10 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./results.component.scss']
 })
 export class ResultsComponent implements OnInit {
-
-  constructor() { }
+   usuSesion:any;
+   listaCodesQr: codeqr[]=[];
+  constructor(private cookies: CookieService, private resultsService: ResultsService) { }
 
   ngOnInit(): void {
+      this.usuSesion = this.cookies.get("usuarioSesion");
+      this.resultsService.getHistory(this.usuSesion.id_usuario).subscribe(data =>{
+        this.listaCodesQr = data.codes;
+      },
+      err =>{
+        console.log(err)
+      }
+      );
   }
-
 }

@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
     this.loginService.login(user).subscribe(data =>{
       console.log(data);
       this.cookies.set("usuarioSesion", JSON.stringify(data.usuario));
+      console.log(data.usuario)
       location.pathname = 'generate';
     },
     err =>{
