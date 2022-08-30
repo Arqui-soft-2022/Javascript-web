@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+  active:boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  
+  toggleOptions():void { this.active= !this.active }
 }

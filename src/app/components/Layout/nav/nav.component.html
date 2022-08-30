@@ -1,10 +1,18 @@
-<nav class="w-4/5 mx-auto">
+<nav class="w-4/5 mx-auto relative">
     <ul class="flex justify-end">
-        <li class="flex items-center">
-            <a class="text-white" href="">
-                <i class="fas fa-user text-xl"></i>
-                User1
-            </a>
+        <li class="flex items-center cursor-pointer text-white" (click)="toggleOptions()">
+            <i class="fa-solid fa-circle-user text-xl mr-3"></i>
+            User1
+        </li>
+    </ul>
+    <ul *ngIf="active" class="modal-nav rounded-xl bg-white">
+        <li class="px-5 py-2 hover:bg-gray-200 cursor-pointer duration-300">
+            <i class="fa-solid fa-clock-rotate-left mr-1"></i>
+            Ver historial
+        </li>
+        <li class="px-5 py-2 hover:bg-gray-200 cursor-pointer duration-300">
+            <i class="fa-solid fa-arrow-right-from-bracket mr-1"></i>
+            Cerrar sesión
         </li>
     </ul>
 </nav>
