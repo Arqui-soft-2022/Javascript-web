@@ -1,3 +1,4 @@
+<app-header></app-header>
 <main class="flex w-100 items-center justify-center min-h-screen flex-col">
     <h1 class="text-2xl md:text-4xl font-semibold text-white mb-5">Generate su código QR</h1>
     <div class="md:flex">
@@ -8,10 +9,10 @@
                     <p class="text-xl mb-3">Sitio web (URL)</p>
                     <input
                         class="shadow appearance-none border rounded-xl w-full py-3 px-3 text-gray-700 mb-5 border-zinc-500"
-                        type="text">
+                        type="text" name="url" [(ngModel)]="url">
                     <button
-                        class="bg-appweb-2 text-white font-semibold transform hover:scale-105 duration-300 transition-all hover:bg-blue-800 text-xl py-3 px-12 rounded-xl"><i
-                            class="fa-solid fa-arrows-rotate mr-3"></i>Generar código QR</button>
+                        class="bg-appweb-2 text-white font-semibold transform hover:scale-105 duration-300 transition-all hover:bg-blue-800 text-xl py-3 px-12 rounded-xl" (click)="generate()" ><i
+                            class="fa-solid fa-arrows-rotate mr-3" (click)="generate()"></i>Generar código QR</button>
                 </form>
             </article>
         </section>
@@ -19,11 +20,11 @@
             <article class="text-center">
                 <p class="text-2xl font-semibold">Código QR</p>
                 <img class="h-40 w-40 mx-auto mb-3"
-                    src="https://www.ocu.org/-/media/ta/images/qr-code.png?rev=2e1cc496-40d9-4e21-a7fb-9e2c76d6a288&hash=AF7C881FCFD0CBDA00B860726B5E340B&mw=960"
+                    src= '{{ img }}'
                     alt="QR">
-                <button
-                    class="bg-appweb-2 text-white font-semibold transform hover:scale-105 duration-300 transition-all hover:bg-blue-800 text-xl py-3 px-12 rounded-xl">Exportar
-                    QR</button>
+                    <a
+                    class="bg-appweb-2 text-white font-semibold transform hover:scale-105 duration-300 transition-all hover:bg-blue-800 text-xl py-3 px-12 rounded-xl" href='{{ img }}' download="">Exportar
+                    QR</a>
             </article>
         </section>
     </div>

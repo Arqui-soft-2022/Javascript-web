@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { codeqr } from 'src/app/interfaces/codeqr.interface';
-import { ResultsService } from './results.service';
+import { ResultsService } from '../../service/results.service';
 
 @Component({
   selector: 'app-results',

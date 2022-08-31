@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RegisterService } from './register.service';
+import { RegisterService } from '../../service/register.service';
 
 @Component({
   selector: 'app-register',
@@ -27,11 +27,12 @@ export class RegisterComponent implements OnInit {
       email: this.correo,
       name: this.name,
     }
-    console.log(user)
+    // console.log(user)
     this.registroService.registrar(user).subscribe(data => {
       
       console.log(data);
       location.pathname = '';
+
     }, err => {
       
       alert('Ha ocurrido un error');
