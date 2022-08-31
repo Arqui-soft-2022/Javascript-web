@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GenerateService } from './generate.service';
+import { GenerateService } from '../../service/generate.service';
 import { CookieService } from 'ngx-cookie-service';
 import { Variable } from '@angular/compiler/src/render3/r3_ast';
 
@@ -10,6 +10,7 @@ import { Variable } from '@angular/compiler/src/render3/r3_ast';
 })
 export class GenerateComponent implements OnInit {
 
+
   url:string;
   user:any;
   img = 'https://www.ocu.org/-/media/ta/images/qr-code.png?rev=2e1cc496-40d9-4e21-a7fb-9e2c76d6a288&hash=AF7C881FCFD0CBDA00B860726B5E340B&mw=960';
@@ -19,6 +20,7 @@ export class GenerateComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
   }
 
   generate(){
