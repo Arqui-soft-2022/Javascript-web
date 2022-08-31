@@ -9,14 +9,28 @@ import { ResultsService } from './results.service';
   styleUrls: ['./results.component.scss']
 })
 export class ResultsComponent implements OnInit {
-   usuSesion:any;
-   listaCodesQr: codeqr[]=[];
+   usuSesion:any
+   user:string
+   listaCodeQr: codeqr[]=[];
   constructor(private cookies: CookieService, private resultsService: ResultsService) { }
 
   ngOnInit(): void {
       this.usuSesion = this.cookies.get("usuarioSesion");
-      this.resultsService.getHistory(this.usuSesion.id_usuario).subscribe(data =>{
-        this.listaCodesQr = data.codes;
+      let usuSes = JSON.parse(this.usuSesion);
+      //console.log(typeof this.usuSesion)
+      //console.log(this.usuSesion.toUpperCase())
+      console.log("*******")
+      console.log(usuSes)
+      //console.log(typeof usuSes)
+      //console.log(usuSes.id_usuario)
+
+      let idUser={
+        user: usuSes.id_usuario
+      };
+
+      this.resultsService.getHistory(idUser).subscribe(data =>{
+        this.listaCodeQr = data.codes;
+        console.log(this.listaCodeQr)
       },
       err =>{
         console.log(err)

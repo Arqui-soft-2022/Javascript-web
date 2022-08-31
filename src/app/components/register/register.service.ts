@@ -11,7 +11,7 @@ import { CookieService } from "ngx-cookie-service";
 export class RegisterService {
 
 
-    private apiUrl = 'https://codeqr-generate.herokuapp.com/api/auth/register';
+    private apiUrl = 'https://codeqr-generate2.herokuapp.com/api/auth/register';
 
     constructor(private http: HttpClient, private cookieService : CookieService){
 

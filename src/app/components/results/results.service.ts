@@ -6,10 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ResultsService {
-  private apiURL:string = 'https://codeqr-generate.herokuapp.com/api/code/historial/';
+  private apiURL:string = 'https://codeqr-generate2.herokuapp.com/api/code/historial/';
   constructor(private http: HttpClient) { }
 
-  getHistory(idUser:number):Observable<any>{
+  getHistory(idUser:any):Observable<any>{
     return this.http.post(this.apiURL, idUser);
   }
 }
