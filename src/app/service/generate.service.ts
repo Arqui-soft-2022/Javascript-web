@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class GenerateService {
 
-  private apiUrl ='https://codeqr-generate2.herokuapp.com/api/code/';
+  private apiUrl ='https://codeqr-generate.herokuapp.com/api/code/';
   constructor( private http: HttpClient) {}
 
   get_generar_qr(generate:any ): Observable<any>{
