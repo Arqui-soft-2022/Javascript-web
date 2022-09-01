@@ -1,27 +1,39 @@
-# Appweb
+# Javascript-web ☕
+Web project "generate QR code" developed in Javascript language using an opensource framework for web applications called Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
+This project is based on the generation of QR codes by means of a URL, where it is possible to export in .png format and the type of associated resource is displayed.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Getting started 🚀
 
-## Code scaffolding
+These instructions will allow you to install correctly the javscript web project
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+### Prerequisites 📋
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Nodejs 
+- Angular CLI
+- Integrated Development Environment (IDE) (WebStorm) or a source code editor (Visual Studio Code) (recommended)
+- Linux,Windows,Mac OS
+- Web Browser: Chrome, Mozilla Firefox, Microsoft
 
-## Running unit tests
+### Installation 🔧
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Init your repository 
+ - git init
+ - git add .
+ - git -m commit "my first commit"
+2. Clone the repository 
+- git clone https://github.com/Arqui-soft-2022/Javascript-web or download the source code.
 
-## Running end-to-end tests
+### built with 🛠️
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Angular
+- Tailwindcss
 
-## Further help
+### Authors ✒️
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Sebastián Casadiegos
+- Cristian Medina
+- Jeferson Rodríguez
+- Brayan Ismael
