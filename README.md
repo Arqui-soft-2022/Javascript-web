@@ -1,4 +1,4 @@
-# Javascript-web ☕
+# Javascript-web 🌐
 Web project "generate QR code" developed in Javascript language using an opensource framework for web applications called Angular
 
 This project is based on the generation of QR codes by means of a URL, where it is possible to export in .png format and the type of associated resource is displayed.
